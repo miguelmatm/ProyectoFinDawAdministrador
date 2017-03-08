@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
+  
+	<listener>
+		<listener-class>Listener.SessionListener</listener-class>
+	</listener>
+	
+	<context-param>
+		<param-name>dbHostname</param-name>
+		<param-value>jdbc:postgresql://ns3034756.ip-91-121-81.eu/mtalavera?currentSchema=proyecto</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbDatabase</param-name>
+		<param-value>mtalavera</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbUsername</param-name>
+		<param-value>mtalavera</param-value>
+	</context-param>
+	<context-param>
+		<param-name>dbPassword</param-name>
+		<param-value>mtalavera</param-value>
+	</context-param>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <display-name>LoginAdmin</display-name>
+  
+  <servlet>
+    <servlet-name>LoginAdmin</servlet-name>
+    <servlet-class>PControlador.ServletPrincipal</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>LoginAdmin</servlet-name>
+    <url-pattern>LoginAdmin</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <display-name>Incidencias</display-name>
+    <servlet-name>Incidencias</servlet-name>
+    <servlet-class>PControlador.ServletIncidencias</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Incidencias</servlet-name>
+    <url-pattern>Incidencias</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+    <display-name>ProyectosAdmin</display-name>
+    <servlet-name>ProyectosAdmin</servlet-name>
+    <servlet-class>PControlador.ServletProyectosAdmin</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>ProyectosAdmin</servlet-name>
+    <url-pattern>ProyectosAdmin</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <display-name>Trabajadores</display-name>
+    <servlet-name>Trabajadores</servlet-name>
+    <servlet-class>PControlador.ServletTrabajadores</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Trabajadores</servlet-name>
+    <url-pattern>Trabajadores</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <display-name>Proyectos</display-name>
+    <servlet-name>Proyectos</servlet-name>
+    <servlet-class>PControlador.ServletProyectos</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Proyectos</servlet-name>
+    <url-pattern>Proyectos</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <display-name>TrabajarEn</display-name>
+    <servlet-name>TrabajarEn</servlet-name>
+    <servlet-class>PControlador.ServletTrabajarEn</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>TrabajarEn</servlet-name>
+    <url-pattern>TrabajarEn</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+    <welcome-file>login.htm</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+    <description>Lugar para almacenar archivos subidos</description>
+    <param-name>file-upload</param-name>
+    <param-value>
+         data
+     </param-value>
+  </context-param>
+</web-app>
